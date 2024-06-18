@@ -14,8 +14,9 @@ namespace SmsHub.Core.Application.Profiles
     {
         public MappingProfile()
         {
-            CreateMap<Event, EventDto>().ReverseMap();
+            CreateMap<Event, GetEventListDto>().ReverseMap();
             CreateMap<Event, CreateEventCommand>().ReverseMap();
+            CreateMap<Event, CreateEventDto>().ReverseMap();
         }
     }
 }

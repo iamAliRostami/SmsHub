@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmsHub.Core.Application.Features.Events.Query
 {
-    public class GetEventListQuery:IRequest<List<EventDto>>
+    public class GetEventListQuery:IRequest<List<GetEventListDto>>
     {
     }
 }

@@ -11,15 +11,15 @@ using System.Threading.Tasks;
 namespace SmsHub.Core.Application.Features.Events.Query
 {
     public class GetEventListQueryHandler(IMapper mapper, IAsyncRepository<Event> eventRepository) : IRequestHandler<GetEventListQuery,
-        List<EventDto>>
+        List<GetEventListDto>>
     {
         private readonly IAsyncRepository<Event> _eventRepository = eventRepository;
         private readonly IMapper _mapper = mapper;
 
-        async Task<List<EventDto>> IRequestHandler<GetEventListQuery, List<EventDto>>.Handle(GetEventListQuery request, CancellationToken cancellationToken)
+        async Task<List<GetEventListDto>> IRequestHandler<GetEventListQuery, List<GetEventListDto>>.Handle(GetEventListQuery request, CancellationToken cancellationToken)
         {
-            var allEvents = (await _eventRepository.GetAllAsync()).OrderBy(x => x.id);
-            return _mapper.Map<List<EventDto>>(allEvents);
+            var allEvents = (await _eventRepository.GetAllAsync()).OrderBy(x => x.Id);
+            return _mapper.Map<List<GetEventListDto>>(allEvents);
         }
     }
 }

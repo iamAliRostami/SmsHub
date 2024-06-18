@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmsHub.Core.Application.Features.Events.Query
 {
-    internal class EventDto
+    internal class GetEventListDto
     {
     }
 }

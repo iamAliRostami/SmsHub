@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmsHub.Core.Domain.Entity
+namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
 {
-    public class Event
+    public class CreateEventDto
     {
-        public Guid Id { get; set; }
-        public string Name { get; set; } = string.Empty;  
+        public string Name { get; set; } = string.Empty;
         public DateTime Date { get; set; }
     }
 }
