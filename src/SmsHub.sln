@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0E9922AA-B778-4639-9FC8-B80862C1E284}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF0FCC23-9EA8-443C-A59C-EC1C9D2CB1AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{0363F5A6-1CF3-47C8-9F4A-1939916F237B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B215C449-EA63-4C9C-86FD-D97437BF67C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{4B91B1C1-E351-47DD-AF98-4D773F64287A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{ADC29DB0-AEB8-40D6-935E-E730C7C95EA2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmsHub.Core.Domain", "Core.Domain\SmsHub.Core.Domain.csproj", "{9925C15C-F7A5-4112-ADD2-4EA437A28B46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsHub.Core.Application", "Core.Application\SmsHub.Core.Application.csproj", "{F150C6B9-736A-4219-8BE4-D0EF585D39AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9925C15C-F7A5-4112-ADD2-4EA437A28B46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9925C15C-F7A5-4112-ADD2-4EA437A28B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9925C15C-F7A5-4112-ADD2-4EA437A28B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9925C15C-F7A5-4112-ADD2-4EA437A28B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F150C6B9-736A-4219-8BE4-D0EF585D39AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F150C6B9-736A-4219-8BE4-D0EF585D39AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F150C6B9-736A-4219-8BE4-D0EF585D39AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F150C6B9-736A-4219-8BE4-D0EF585D39AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0363F5A6-1CF3-47C8-9F4A-1939916F237B} = {DF0FCC23-9EA8-443C-A59C-EC1C9D2CB1AA}
+		{B215C449-EA63-4C9C-86FD-D97437BF67C0} = {DF0FCC23-9EA8-443C-A59C-EC1C9D2CB1AA}
+		{4B91B1C1-E351-47DD-AF98-4D773F64287A} = {DF0FCC23-9EA8-443C-A59C-EC1C9D2CB1AA}
+		{ADC29DB0-AEB8-40D6-935E-E730C7C95EA2} = {DF0FCC23-9EA8-443C-A59C-EC1C9D2CB1AA}
+		{9925C15C-F7A5-4112-ADD2-4EA437A28B46} = {B215C449-EA63-4C9C-86FD-D97437BF67C0}
+		{F150C6B9-736A-4219-8BE4-D0EF585D39AC} = {B215C449-EA63-4C9C-86FD-D97437BF67C0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CF2D4FB-ACE3-430E-9602-EC3845DC3C43}
+	EndGlobalSection
+EndGlobal
