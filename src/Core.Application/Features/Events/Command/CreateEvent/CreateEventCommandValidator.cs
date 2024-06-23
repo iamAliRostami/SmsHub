@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
 using SmsHub.Core.Application.Contracts.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
 {
@@ -19,8 +14,8 @@ namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
                 .NotNull()
                 .MaximumLength(50).WithMessage("{PropertyName} max length is 50");
 
-            RuleFor(e => e).MustAsync(EventNameAndDateUnique).WithMessage("");
-            
+            RuleFor(e => e).MustAsync(EventNameAndDateUnique)
+                .WithMessage("An event with the same name and date already exists.");
         }
         private async Task<bool> EventNameAndDateUnique(CreateEventCommand e, CancellationToken token) {
             return !(await _eventRepository.IsEventNameAndDateUnique(e.Name, e.Date));

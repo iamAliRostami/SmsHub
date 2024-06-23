@@ -1,10 +1,4 @@
-﻿using SmsHub.Core.Application.Features.Events.Query;
-using SmsHub.Core.Application.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SmsHub.Core.Application.Responses;
 
 namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
 {
@@ -13,7 +7,6 @@ namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
         public CreateEventDto @event { get; set; } = default!;
         public CreateEventCommandResponse():base()
         {
-            
         }
     }
 }
