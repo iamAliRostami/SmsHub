@@ -9,5 +9,6 @@
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity); 
         Task DeleteAsync(Guid id);
+        Task<IReadOnlyList<T>> GetPagedReponseAsync(int page, int size);
     }
 }

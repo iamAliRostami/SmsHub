@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SmsHub.Core.Domain.Comman;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmsHub.Core.Domain.Entity
 {
-    public class Event
+    public class Event :AuditableEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;  
