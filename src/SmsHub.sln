@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Infrastructu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmsHub.Infrastructure.Persistence", "Infrastructure\Persistence\SmsHub.Infrastructure.Persistence.csproj", "{FEC629AF-00E1-4F9D-928C-9C6CEC110849}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmsHub.Api", "Api\SmsHub.Api.csproj", "{481DE041-520F-4116-9B10-FCF903E40714}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{FEC629AF-00E1-4F9D-928C-9C6CEC110849}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEC629AF-00E1-4F9D-928C-9C6CEC110849}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEC629AF-00E1-4F9D-928C-9C6CEC110849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{481DE041-520F-4116-9B10-FCF903E40714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{481DE041-520F-4116-9B10-FCF903E40714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{481DE041-520F-4116-9B10-FCF903E40714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{481DE041-520F-4116-9B10-FCF903E40714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{F150C6B9-736A-4219-8BE4-D0EF585D39AC} = {B215C449-EA63-4C9C-86FD-D97437BF67C0}
 		{7339B510-7074-43EF-B434-2F977FB56EDB} = {4B91B1C1-E351-47DD-AF98-4D773F64287A}
 		{FEC629AF-00E1-4F9D-928C-9C6CEC110849} = {4B91B1C1-E351-47DD-AF98-4D773F64287A}
+		{481DE041-520F-4116-9B10-FCF903E40714} = {0363F5A6-1CF3-47C8-9F4A-1939916F237B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CF2D4FB-ACE3-430E-9602-EC3845DC3C43}
