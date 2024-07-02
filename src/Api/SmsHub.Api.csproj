@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 	<ItemGroup>
+		<PackageReference Include="MediatR" Version="11.0.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,10 +19,6 @@
     <ProjectReference Include="..\Core.Application\SmsHub.Core.Application.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure\SmsHub.Infrastructure.Infrastructure.csproj" />
     <ProjectReference Include="..\Infrastructure\Persistence\SmsHub.Infrastructure.Persistence.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>

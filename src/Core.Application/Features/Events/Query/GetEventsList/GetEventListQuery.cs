@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmsHub.Core.Application.Features.Events.Query
+namespace SmsHub.Core.Application.Features.Events.Query.GetEventsList
 {
-    public class GetEventListQuery:IRequest<List<GetEventListDto>>
+    public class GetEventListQuery : IRequest<List<EventListDto>>
     {
     }
 }

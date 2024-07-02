@@ -1,7 +1,6 @@
 ﻿using SmsHub.Core.Application;
 using SmsHub.Infrastructure.Persistence;
 using SmsHub.Infrastructure.Infrastructure;
-using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 
 namespace SmsHub.Api
@@ -12,6 +11,8 @@ namespace SmsHub.Api
             builder.Services.AddApplicationServices();
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddPersistenceServices(builder.Configuration);
+
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddControllers();
 
@@ -26,6 +27,8 @@ namespace SmsHub.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseCors("Open");
 

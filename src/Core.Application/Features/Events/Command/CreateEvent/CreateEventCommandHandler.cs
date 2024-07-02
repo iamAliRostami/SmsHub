@@ -32,7 +32,7 @@ namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
             if (createEventCommandResponse.Success) {
                 var @event = new Event() { Name = request.Name };
                 @event = await _eventRepository.AddAsync(@event);
-                createEventCommandResponse.@event = _mapper.Map<CreateEventDto>(@event);
+                createEventCommandResponse.@event = _mapper.Map<EventDto>(@event);
             }
             /*var @event = _mapper.Map<Event>(request);
             @event = await _eventRepository.AddAsync(@event);

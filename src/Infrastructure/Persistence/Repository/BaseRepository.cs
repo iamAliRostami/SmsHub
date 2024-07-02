@@ -33,7 +33,7 @@ namespace SmsHub.Infrastructure.Persistence.Repository
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<IReadOnlyList<T>> GetAllAsync()
+        public async Task<IReadOnlyList<T>> ListAllAsync()
         {
             return await _dbContext.Set<T>().ToListAsync();
         }
