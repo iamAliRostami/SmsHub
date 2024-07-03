@@ -1,9 +1,4 @@
-﻿using SmsHub.Core.Application.Features.Events.Query.GetEventsExport;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SmsHub.Core.Application.Features.Events.Queries.GetEventsExport;
 
 namespace SmsHub.Core.Application.Contracts.Infrastructure
 {

@@ -2,13 +2,8 @@
 using MediatR;
 using SmsHub.Core.Application.Contracts.Persistence;
 using SmsHub.Core.Domain.Entity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SmsHub.Core.Application.Features.Events.Query.GetEventsList
+namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsList
 {
     public class GetEventListQueryHandler(IMapper mapper, IAsyncRepository<Event> eventRepository) : IRequestHandler<GetEventListQuery,
         List<EventListDto>>

@@ -3,7 +3,7 @@ using MediatR;
 using SmsHub.Core.Application.Contracts.Persistence;
 using SmsHub.Core.Domain.Entity;
 
-namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
+namespace SmsHub.Core.Application.Features.Events.Commands.CreateEvent
 {
     public class CreateEventCommandHandler(IMapper mapper, IEventRepository eventRepository)
         : IRequestHandler<CreateEventCommand, CreateEventCommandResponse>

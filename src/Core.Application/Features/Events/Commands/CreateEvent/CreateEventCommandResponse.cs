@@ -1,6 +1,6 @@
 ﻿using SmsHub.Core.Application.Responses;
 
-namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
+namespace SmsHub.Core.Application.Features.Events.Commands.CreateEvent
 {
     public class CreateEventCommandResponse:BaseResponse
     {

@@ -1,9 +1,9 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using SmsHub.Core.Application.Features.Events.Command.CreateEvent;
-using SmsHub.Core.Application.Features.Events.Query;
-using SmsHub.Core.Application.Features.Events.Query.GetEventsExport;
-using SmsHub.Core.Application.Features.Events.Query.GetEventsList;
+using SmsHub.Core.Application.Features.Events.Commands.CreateEvent;
+using SmsHub.Core.Application.Features.Events.Queries;
+using SmsHub.Core.Application.Features.Events.Queries.GetEventsExport;
+using SmsHub.Core.Application.Features.Events.Queries.GetEventsList;
 using SmsHub.Core.Domain.Entity;
 
 namespace SmsHub.Api.Controllers

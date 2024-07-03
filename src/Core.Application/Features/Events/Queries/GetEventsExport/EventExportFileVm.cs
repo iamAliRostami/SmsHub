@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SmsHub.Core.Application.Features.Events.Query.GetEventsExport
+﻿namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsExport
 {
     public class EventExportFileVm
     {

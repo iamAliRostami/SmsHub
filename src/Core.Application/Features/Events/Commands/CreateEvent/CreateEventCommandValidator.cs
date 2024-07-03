@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using SmsHub.Core.Application.Contracts.Persistence;
 
-namespace SmsHub.Core.Application.Features.Events.Command.CreateEvent
+namespace SmsHub.Core.Application.Features.Events.Commands.CreateEvent
 {
     public class CreateEventCommandValidator:AbstractValidator<CreateEventCommand>
     {

@@ -4,7 +4,7 @@ using SmsHub.Core.Application.Contracts.Infrastructure;
 using SmsHub.Core.Application.Contracts.Persistence;
 using SmsHub.Core.Domain.Entity;
 
-namespace SmsHub.Core.Application.Features.Events.Query.GetEventsExport
+namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsExport
 {
     public class GetEventsExportQueryHandler(Mapper mapper,
         IAsyncRepository<Event> repository, ICsvExporter csvExporter) :

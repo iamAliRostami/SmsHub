@@ -1,4 +1,4 @@
-﻿namespace SmsHub.Core.Application.Features.Events.Query.GetEventsExport
+﻿namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsExport
 {
     public class EventExportDto
     {
