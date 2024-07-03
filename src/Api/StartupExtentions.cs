@@ -4,12 +4,17 @@ using SmsHub.Infrastructure.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using SmsHub.Core.Application.Contracts.Infrastructure;
 using SmsHub.Infrastructure.Infrastructure.FileExport;
+using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.OpenApi.Models;
+using SmsHub.Api.Utility;
 
 namespace SmsHub.Api
 {
     public static class StartupExtentions
     {
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder) {
+            AddSwagger(builder.Services);
+
             builder.Services.AddApplicationServices();
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddPersistenceServices(builder.Configuration);
@@ -25,7 +30,17 @@ namespace SmsHub.Api
             return builder.Build();
 
         }
-        public static WebApplication ConfigurePipeline(this WebApplication app) { 
+        public static WebApplication ConfigurePipeline(this WebApplication app) {
+            if (app.Environment.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c=>
+                    {
+                        c.SwaggerEndpoint("/swagger/v1/swagger.json","Sms Hub");
+                    }
+                
+                );
+            }
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -37,6 +52,16 @@ namespace SmsHub.Api
             app.MapControllers();
 
             return app;
+        }
+
+        private static void AddSwagger(IServiceCollection services) {
+            services.AddSwaggerGen(c =>
+                { c.SwaggerDoc("v1", new OpenApiInfo {
+                    Version = "v1",
+                    Title = "Sms Hub"
+                });
+                    c.OperationFilter<FileResultContentTypeOperationFilter>();
+                });
         }
 
         public static async Task ResetDatabaseAsync(this WebApplication app) {
