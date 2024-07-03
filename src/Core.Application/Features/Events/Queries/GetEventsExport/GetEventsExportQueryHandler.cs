@@ -6,11 +6,11 @@ using SmsHub.Core.Domain.Entity;
 
 namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsExport
 {
-    public class GetEventsExportQueryHandler(Mapper mapper,
+    public class GetEventsExportQueryHandler(IMapper mapper,
         IAsyncRepository<Event> repository, ICsvExporter csvExporter) :
         IRequestHandler<GetEventsExportQuery, EventExportFileVm>
     {
-        private readonly Mapper _mapper= mapper;
+        private readonly IMapper _mapper= mapper;
         private readonly IAsyncRepository<Event> _eventRepository = repository;
         private readonly ICsvExporter _csvExporter = csvExporter;
 

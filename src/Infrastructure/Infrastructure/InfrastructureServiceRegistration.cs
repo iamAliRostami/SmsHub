@@ -11,6 +11,7 @@ namespace SmsHub.Infrastructure.Infrastructure
             IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<ICsvExporter, CsvExporter>();
+            /*services.AddTransient<CsvExporter>();*/
             return services;
         }
     }

@@ -1,12 +1,6 @@
 ﻿using CsvHelper;
 using SmsHub.Core.Application.Contracts.Infrastructure;
 using SmsHub.Core.Application.Features.Events.Queries.GetEventsExport;
-using System;
-using System.Collections.Generic;
-using System.Formats.Asn1;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmsHub.Infrastructure.Infrastructure.FileExport
 {
