@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmsHub.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using SmsHub.Infrastructure.Persistence;
 namespace SmsHub.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(SmsHubDbContext))]
-    partial class SmsHubDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240713114847_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

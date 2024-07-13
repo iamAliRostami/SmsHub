@@ -17,10 +17,12 @@ namespace SmsHub.Infrastructure.Persistence
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SmsHubDbContext).Assembly);
 
-            /*modelBuilder.Entity<Event>().HasData(new Event { 
-            
-            });*/
-            /*base.OnModelCreating(modelBuilder);*/
+            modelBuilder.Entity<Event>().HasData(new Event
+            {
+                Id = Guid.Parse("{EE272F8B-6096-4CB6-8625-BB4BB2D89E8B}"),
+                Name = "John Egbert Live",              
+                Date = DateTime.Now.AddMonths(6)                
+            });
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())

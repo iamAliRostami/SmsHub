@@ -13,6 +13,16 @@ namespace SmsHub.Api
     public static class StartupExtentions
     {
         public static WebApplication ConfigureServices(this WebApplicationBuilder builder) {
+            /*using (var serviceScope = builder.Services..ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                context.Database.Migrate();
+            }*/
+            /*builder.Services.AddDbContext<DbContext>(options=>
+            {
+                options.UseSqlServer("Data Source=(localdb)\\ProjectModel;Trusted_Connection=true;");
+            });*/
+
             AddSwagger(builder.Services);
 
             builder.Services.AddApplicationServices();

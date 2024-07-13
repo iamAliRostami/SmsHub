@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmsHub.Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using SmsHub.Infrastructure.Persistence;
 namespace SmsHub.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(SmsHubDbContext))]
-    partial class SmsHubDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240704110013_InitalMigration")]
+    partial class InitalMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -51,15 +54,6 @@ namespace SmsHub.Infrastructure.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Event");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("ee272f8b-6096-4cb6-8625-bb4bb2d89e8b"),
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Date = new DateTime(2025, 1, 13, 15, 18, 45, 977, DateTimeKind.Local).AddTicks(1107),
-                            Name = "John Egbert Live"
-                        });
                 });
 #pragma warning restore 612, 618
         }
