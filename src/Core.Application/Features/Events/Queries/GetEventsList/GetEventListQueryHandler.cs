@@ -11,7 +11,7 @@ namespace SmsHub.Core.Application.Features.Events.Queries.GetEventsList
         private readonly IAsyncRepository<Event> _eventRepository = eventRepository;
         private readonly IMapper _mapper = mapper;
 
-        async Task<List<EventListDto>> IRequestHandler<GetEventListQuery, List<EventListDto>>.Handle(GetEventListQuery request, CancellationToken cancellationToken)
+      public  async Task<List<EventListDto>> Handle(GetEventListQuery request, CancellationToken cancellationToken)
         {
             var allEvents = (await _eventRepository.ListAllAsync()).OrderBy(x => x.Id);
             return _mapper.Map<List<EventListDto>>(allEvents);
